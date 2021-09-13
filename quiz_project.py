@@ -18,14 +18,16 @@ def topic_entry(topics):
     """
 
   print('Enter topic from the following: ')
-    print(topics)
+    print(topics)   # This prints dict_keys(['art', 'space']) - can you display the choices in a more user-friendly way? 
     topic = input('Enter choice: ')
-    return topic.lower()
 
     # validate topic is in the dictionary
-    while topic not in question_bank.keys():
+    while topic not in topics:
         print('please enter a valid input')
+        topic = input('Enter choice: ')
         
+    return topic.lower()  
+
    
 def main():
  # dictionary to hold topics and their questions and answers
